@@ -38,7 +38,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { doc: "installation", label: "Docs" },
+    { href: "https://github.com/ts-engine", label: "GitHub" },
     // {doc: 'doc4', label: 'API'},
     // {page: 'help', label: 'Help'},
     // {blog: true, label: 'Blog'},
@@ -48,9 +48,9 @@ const siteConfig = {
   // users,
 
   /* path to images for header/footer */
-  headerIcon: "img/favicon.ico",
-  footerIcon: "img/favicon.ico",
-  favicon: "img/favicon.ico",
+  headerIcon: "img/ts-engine-logo.svg",
+  footerIcon: "img/ts-engine-logo.svg",
+  favicon: "img/ts-engine-logo.svg",
 
   /* Colors for website */
   colors: {
@@ -104,7 +104,7 @@ const siteConfig = {
 
   // You may provide arbitrary config keys to be used as needed by your
   // template. For example, if you need your repo's URL...
-  //   repoUrl: 'https://github.com/facebook/test-site',
+  repoUrl: "https://github.com/ts-engine/ts-engine",
 };
 
 module.exports = siteConfig;

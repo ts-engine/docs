@@ -5,7 +5,8 @@
     "Miscellaneous": [
       "command-quick-reference",
       "ide-support",
-      "working-in-a-mono-repo"
+      "working-in-a-mono-repo",
+      "react-support"
     ]
   }
 }

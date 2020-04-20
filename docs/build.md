@@ -35,7 +35,9 @@ To build run the follow command:
 ts-engine build --library
 ```
 
-When building a library package ts-engine will check and enfore that `main`, `module` and `types` are set correctly in `package.json`. **The build will not complete if it finds any issues, but will inform you which fields are set incorrectly.**
+When building a library package ts-engine will check and enfore that `main`, `module` and `types` are set correctly in `package.json`.
+
+> **The build will not complete if it finds any issues, but will inform you which fields are set incorrectly.**
 
 ## Watching for changes
 

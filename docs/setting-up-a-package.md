@@ -40,7 +40,7 @@ console.log("hello world");
 
 ## Setting up a library
 
-### package.json
+### `package.json`
 
 Notice `--library` being passed to the build command and `--emit` being passed to the typecheck command.
 
@@ -65,7 +65,7 @@ Notice `--library` being passed to the build command and `--emit` being passed t
 }
 ```
 
-### src/main.ts
+### `src/main.ts`
 
 This is the entry point to your library.
 
