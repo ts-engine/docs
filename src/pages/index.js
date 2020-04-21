@@ -133,6 +133,22 @@ function Feature({ icon, title, description }) {
   );
 }
 
+function HeroLinkWrapper({ children }) {
+  return (
+    <div
+      style={{
+        marginRight: "1rem",
+        borderWidth: "2px",
+        borderRadius: "5px",
+        borderColor: "#fff",
+        color: "#fff",
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
 function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
@@ -149,7 +165,7 @@ function Home() {
           <div className={styles.buttons}>
             <Link
               className={classnames(
-                "button button--outline button--lg heroLink",
+                "button button--outline button--lg",
                 styles.heroLink
               )}
               to={useBaseUrl("docs/installation")}
@@ -158,7 +174,7 @@ function Home() {
             </Link>
             <Link
               className={classnames(
-                "button button--outline button--lg heroLink",
+                "button button--outline button--lg",
                 styles.heroLink
               )}
               to={useBaseUrl("docs/command-quick-reference")}
@@ -167,7 +183,7 @@ function Home() {
             </Link>
             <Link
               className={classnames(
-                "button button--outline button--lg heroLink",
+                "button button--outline button--lg",
                 styles.heroLink
               )}
               to="https://github.com/ts-engine/ts-engine/tree/master/packages/%40examples"
