@@ -8,7 +8,6 @@ module.exports = {
   projectName: "ts-engine", // Usually your repo name.
   themeConfig: {
     algolia: {
-      appId: "ts-engine",
       apiKey: "dd933e60cb4c9589286119ab2d4b6e1e",
       indexName: "ts-engine",
     },
