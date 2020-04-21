@@ -12,7 +12,7 @@ rm -rf $build_dir
 mkdir -p $sandbox_dir
 
 # clone docusaurus mono repo, if it exists it doesn't fail due to /dev/null
-git clone git@github.com:facebook/docusaurus.git $sandbox_dir
+git clone https://github.com/facebook/docusaurus $sandbox_dir
 
 # init mono repo
 cd $sandbox_dir && yarn && cd ..
