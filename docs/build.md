@@ -4,15 +4,23 @@ sidebar_label: Build
 title: Build
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 [Rollup](https://rollupjs.org/) and [Babel](https://babeljs.io/) are the primary tools that power builds in ts-engine.
 
+Two types of packages are fully supported by ts-engine, Node.js applications and libraries. Because each type of package has different requirements at build time the type of the package must be provided when building.
+
+<Tabs
+defaultValue="nodejs"
+values={[
+{ label: 'Node.js App', value: 'nodejs', },
+{ label: 'Library', value: 'library', },
+]
+}>
+<TabItem value="nodejs">
+
 ## Building a Node.js application
-
-Node.js applications have all their external dependencies bundled into them so that they can run stand alone and only have a dependency on Node.js itself.
-
-| Entry files   | Output files   |
-| ------------- | -------------- |
-| `src/main.ts` | `dist/main.js` |
 
 To build run the following command:
 
@@ -20,14 +28,18 @@ To build run the following command:
 ts-engine build --node-app
 ```
 
+A Node.js application produces a single output file with all external dependencies bundled into it.
+
+| Entry files   | Output files   |
+| ------------- | -------------- |
+| `src/main.ts` | `dist/main.js` |
+
+</TabItem>
+<TabItem value="library">
+
 ## Building a library
 
-Libraries do not have their external dependencies bundled into them as it can lead to bundling issues when consumers use your package. In order to support CommonJS and ES Modules two build outputs are produced, one for each.
-
-| Entry files   | Output files       |
-| ------------- | ------------------ |
-| `src/main.ts` | `dist/main.cjs.js` |
-|               | `dist/main.esm.js` |
+Libraries do not have their external dependencies bundled into them as it can lead to bundling issues when consumers use your package.
 
 To build run the follow command:
 
@@ -35,9 +47,23 @@ To build run the follow command:
 ts-engine build --library
 ```
 
-When building a library package ts-engine will check and enfore that `main`, `module` and `types` are set correctly in `package.json`.
+In order to support CommonJS and ES Modules two build outputs are produced, one for each. No external dependencies are bundled into the output.
 
-> **The build will not complete if it finds any issues, but will inform you which fields are set incorrectly.**
+| Entry files   | Output files       |
+| ------------- | ------------------ |
+| `src/main.ts` | `dist/main.cjs.js` |
+|               | `dist/main.esm.js` |
+
+### Package.json sanity check
+
+When building a library ts-engine will check and enfore that `main`, `module` and `types` are set correctly in `package.json`.
+
+:::warning
+The build will not complete if it finds any issues when checking `package.json` and will inform you which fields are set incorrectly.
+:::
+
+</TabItem>
+</Tabs>
 
 ## Watching for changes
 
@@ -45,13 +71,28 @@ The build command also supports watching for changes to source code and rebuildi
 
 To build and trigger watch mode run the following command:
 
-```sh
-# Node.js application
-ts-engine build --node-app --watch
+<Tabs
+defaultValue="nodejs"
+values={[
+{ label: 'Node.js App', value: 'nodejs', },
+{ label: 'Library', value: 'library', },
+]
+}>
+<TabItem value="nodejs">
 
-# Library
+```sh
+ts-engine build --node-app --watch
+```
+
+</TabItem>
+<TabItem value="library">
+
+```sh
 ts-engine build --library --watch
 ```
+
+</TabItem>
+</Tabs>
 
 ## Extending Babel config
 
@@ -59,13 +100,32 @@ Babel config does not need to be provided to ts-engine, however it is possible t
 
 Install ts-engine's default babel preset:
 
+<Tabs
+defaultValue="yarn"
+values={[
+{ label: 'Yarn', value: 'yarn', },
+{ label: 'npm', value: 'npm', },
+]
+}>
+<TabItem value="yarn">
+
 ```sh
 yarn add --dev @ts-engine/babel-preset
 ```
 
-Add an `babel.config.js` file in your packages root directory:
+</TabItem>
+<TabItem value="npm">
 
-```ts
+```sh
+npm i -D @ts-engine/babel-preset
+```
+
+</TabItem>
+</Tabs>
+
+Add a `babel.config.js` file in your packages root directory:
+
+```ts title="babel.config.json"
 module.exports = {
   presets: ["@ts-engine/babel-preset"],
   // your config goes here

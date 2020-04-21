@@ -26,4 +26,6 @@ To run all tests in watch mode run the following command:
 ts-engine test --watch
 ```
 
-> **Custom Jest config support is planned for a future release.**
+:::info
+Custom Jest config support is planned for a future release.
+:::
