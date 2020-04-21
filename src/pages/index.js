@@ -15,22 +15,21 @@ const Logo = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <title>ts-engine logo</title>
       <rect width="130" height="130" rx="10" fill="white" />
       <circle
         cx="77.7631"
         cy="110.763"
         r="39.2631"
         fill="white"
-        stroke="#007ACC"
+        stroke="#0375BF"
         stroke-width="7"
       />
       <circle
         cx="77.7631"
         cy="110.763"
         r="17.8815"
-        fill="#007ACC"
-        stroke="#007ACC"
+        fill="#0375BF"
+        stroke="#0375BF"
         stroke-width="7"
       />
       <circle
@@ -38,13 +37,13 @@ const Logo = () => {
         cy="37.5"
         r="18.5"
         fill="white"
-        stroke="#007ACC"
+        stroke="#0375BF"
         stroke-width="6"
       />
-      <circle cx="35" cy="37" r="7.5" fill="#007ACC" stroke="#007ACC" />
+      <circle cx="35" cy="37" r="7.5" fill="#0375BF" stroke="#0375BF" />
       <path
         d="M17 43.5L40 123M49 26L103 80.5"
-        stroke="#007ACC"
+        stroke="#0375BF"
         stroke-width="6"
       />
     </svg>
