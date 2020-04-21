@@ -18,6 +18,10 @@ This command starts a local development server and open up a browser window. Mos
 
 ### Build
 
+> **IMPORTANT**
+>
+> **Build is currently broken in `2.0.0-alpha.50` so you need to clone down docusaurus, copy the package into their mono repo and build from there.**
+
 ```
 $ yarn build
 ```
