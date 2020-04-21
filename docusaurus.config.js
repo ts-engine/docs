@@ -71,8 +71,7 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          editUrl:
-            "https://github.com/facebook/docusaurus/edit/master/website/",
+          editUrl: "https://github.com/ts-engine/docs/edit/master/",
         },
         theme: {
           customCss: require.resolve("./src/css/custom.css"),

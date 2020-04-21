@@ -1,5 +1,5 @@
 module.exports = {
-  default: {
+  docs: {
     "Getting Started": ["installation", "setting-up-a-package"],
     Commands: ["build", "lint", "test", "typecheck"],
     Miscellaneous: [
