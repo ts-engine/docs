@@ -48,4 +48,6 @@
 
 .heroLink {
   margin-right: 10px;
+  border-color: #fff !important;
+  color: #fff !important;
 }
