@@ -94,7 +94,7 @@ const features = [
     ),
   },
   {
-    title: <>Less dependencies</>,
+    title: <>Fewer dependencies</>,
     icon: () => {
       return (
         <svg
@@ -149,7 +149,7 @@ function Home() {
           <div className={styles.buttons}>
             <Link
               className={classnames(
-                "button button--outline button--lg",
+                "button button--outline button--lg heroLink",
                 styles.heroLink
               )}
               to={useBaseUrl("docs/installation")}
@@ -158,7 +158,7 @@ function Home() {
             </Link>
             <Link
               className={classnames(
-                "button button--outline button--lg",
+                "button button--outline button--lg heroLink",
                 styles.heroLink
               )}
               to={useBaseUrl("docs/command-quick-reference")}
@@ -167,7 +167,7 @@ function Home() {
             </Link>
             <Link
               className={classnames(
-                "button button--outline button--lg",
+                "button button--outline button--lg heroLink",
                 styles.heroLink
               )}
               to="https://github.com/ts-engine/ts-engine/tree/master/packages/%40examples"
@@ -182,8 +182,9 @@ function Home() {
           <h3>What is ts-engine?</h3>
           <p>
             ts-engine is a tool that provides build, lint, test and typechecking
-            functionality for TypeScript packages. It supporting building
-            Node.js applications and JavaScript libraries.{" "}
+            functionality for TypeScript packages via an easy to use command
+            line interface. It supports building Node.js applications and
+            JavaScript libraries.{" "}
             <strong>
               This tool is not currently suitable for building websites.
             </strong>
