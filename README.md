@@ -1,37 +1,27 @@
-# Website
+# @ts-engine/docs
 
-This website is built using [Docusaurus 2](https://v2.docusaurus.io/), a modern static website generator.
+[![Netlify Status](https://api.netlify.com/api/v1/badges/489cd504-6871-48f5-a6a6-b88191c92041/deploy-status)](https://app.netlify.com/sites/ts-engine/deploys)
 
-### Installation
+Documentation website for ts-engine. Powered by [Docusaurus 2](https://v2.docusaurus.io/), see their auto-generated readme [here](./DOCUSAURUS_README.md).
 
-```
-$ yarn
-```
+# Getting started
 
-### Local Development
+```sh
+# Install dependencies
+yarn
 
-```
-$ yarn start
-```
-
-This command starts a local development server and open up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
-> **IMPORTANT**
->
-> **Build is currently broken in `2.0.0-alpha.50` so you need to clone down docusaurus, copy the package into their mono repo and build from there.**
-
-```
-$ yarn build
+# Run dev server with hot reloading
+yarn start
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+# Building for production
 
-### Deployment
+> **This project uses Docusaurus v2 which is still in alpha!**
 
+Docusaurus ships with a build command but it is currently broken on the alpha release. Instead we have a script that builds this website inside their own mono repo to fix the build issues.
+
+To build run the custom script:
+
+```sh
+./build.sh
 ```
-$ GIT_USER=<Your GitHub username> USE_SSH=true yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
