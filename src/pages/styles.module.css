@@ -25,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .features {
@@ -48,6 +49,7 @@
 
 .heroLink {
   margin-right: 10px;
+  margin-bottom: 10px;
   border: 1px solid #fff;
   border-radius: 5px;
   color: #fff;
