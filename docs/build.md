@@ -22,43 +22,41 @@ values={[
 
 ## Building a Node.js application
 
-To build run the following command:
+To build a Node.js application run the following command:
 
 ```sh
 ts-engine build --node-app
 ```
 
-A Node.js application produces a single output file with all external dependencies bundled into it.
+A Node.js application produces a single output file.
 
-| Entry files   | Output files   |
-| ------------- | -------------- |
-| `src/main.ts` | `dist/main.js` |
+| Entry files   | Output files   | Module type |
+| ------------- | -------------- | ----------- |
+| `src/main.ts` | `dist/main.js` | CommonJs    |
 
 </TabItem>
 <TabItem value="library">
 
 ## Building a library
 
-Libraries do not have their external dependencies bundled into them as it can lead to bundling issues when consumers use your package.
-
-To build run the follow command:
+To build a library run the follow command:
 
 ```sh
 ts-engine build --library
 ```
 
-In order to support CommonJS and ES Modules two build outputs are produced, one for each. No external dependencies are bundled into the output.
+In order to support CommonJS and ES Modules two build outputs are produced, one for each.
 
-| Entry files   | Output files       |
-| ------------- | ------------------ |
-| `src/main.ts` | `dist/main.cjs.js` |
-|               | `dist/main.esm.js` |
+| Entry files   | Output files       | Module type |
+| ------------- | ------------------ | ----------- |
+| `src/main.ts` | `dist/main.cjs.js` | CommonJs    |
+|               | `dist/main.esm.js` | ES Modules  |
 
 ### Package.json sanity check
 
 When building a library ts-engine will check and enfore that `main`, `module` and `types` are set correctly in `package.json`.
 
-:::warning
+:::note
 The build will not complete if it finds any issues when checking `package.json` and will inform you which fields are set incorrectly.
 :::
 
@@ -93,6 +91,37 @@ ts-engine build --library --watch
 
 </TabItem>
 </Tabs>
+
+#### Bundling dependencies
+
+Sometimes it is useful to bundle dependencies into the output file so you can run the file without `node_modules`. This makes it easier to use, share and deploy as it is a single file. You can bundle dependencies into a Node.js application or a library with ts-engine.
+
+<Tabs
+defaultValue="nodejs"
+values={[
+{ label: 'Node.js App', value: 'nodejs', },
+{ label: 'Library', value: 'library', },
+]
+}>
+<TabItem value="nodejs">
+
+```sh
+ts-engine build --node-app --bundle-dependencies
+```
+
+</TabItem>
+<TabItem value="library">
+
+```sh
+ts-engine build --library --bundle-dependencies
+```
+
+</TabItem>
+</Tabs>
+
+:::note
+Not all packages can be bundled, ts-engine uses Rollup internally and does not support dynamic calls to `require(...)` or circular dependencies, as well as other things.
+:::
 
 ## Extending Babel config
 
