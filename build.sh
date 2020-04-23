@@ -29,6 +29,8 @@ cp versions.json $sandbox_package_dir
 cp -R docs $sandbox_package_dir/docs
 cp -R src $sandbox_package_dir/src
 cp -R static $sandbox_package_dir/static
+cp -R versioned_docs $sandbox_package_dir/versioned_docs
+cp -R versioned_sidebars $sandbox_package_dir/versioned_sidebars
 
 # build
 cd $sandbox_package_dir && yarn build && cd ../../..
