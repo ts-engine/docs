@@ -1,3 +1,5 @@
+const versions = require("./versions.json");
+
 module.exports = {
   title: "ts-engine",
   tagline: "Power TypeScript packages and reduce your config overhead",
@@ -23,6 +25,16 @@ module.exports = {
           activeBasePath: "docs",
           label: "Docs",
           position: "left",
+          items: [
+            {
+              label: `${versions[0]} (latest)`,
+              to: "docs/installation",
+            },
+            ...versions.slice(1).map((version) => ({
+              label: version,
+              to: `docs/${version}/installation`,
+            })),
+          ],
         },
         {
           href: "https://github.com/ts-engine",
