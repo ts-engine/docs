@@ -25,6 +25,7 @@ mkdir $sandbox_package_dir
 cp package.json $sandbox_package_dir
 cp docusaurus.config.js $sandbox_package_dir
 cp sidebars.js $sandbox_package_dir
+cp versions.json $sandbox_package_dir
 cp -R docs $sandbox_package_dir/docs
 cp -R src $sandbox_package_dir/src
 cp -R static $sandbox_package_dir/static
