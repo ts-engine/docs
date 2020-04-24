@@ -34,6 +34,10 @@ module.exports = {
               label: version,
               to: `docs/${version}/installation`,
             })),
+            {
+              label: "Next",
+              to: `docs/next/installation`,
+            },
           ],
         },
         {
