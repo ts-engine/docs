@@ -1,0 +1,66 @@
+{
+  "version-1.3.0/docs": [
+    {
+      "type": "category",
+      "label": "Getting Started",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-1.3.0/installation"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.3.0/setting-up-a-package"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Commands",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-1.3.0/build"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.3.0/lint"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.3.0/start"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.3.0/test"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.3.0/typecheck"
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Miscellaneous",
+      "items": [
+        {
+          "type": "doc",
+          "id": "version-1.3.0/command-quick-reference"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.3.0/ide-support"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.3.0/working-in-a-mono-repo"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.3.0/react-support"
+        }
+      ]
+    }
+  ]
+}
