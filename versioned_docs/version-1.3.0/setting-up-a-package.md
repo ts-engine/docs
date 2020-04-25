@@ -19,8 +19,8 @@ A basic Node.js application only requires a `package.json` file and a code entry
   "scripts": {
     "build": "ts-engine build --node-app",
     "lint": "ts-engine lint",
-    "test": "ts-engine test",
     "start": "ts-engine start",
+    "test": "ts-engine test",
     "typecheck": "ts-engine typecheck"
   },
   "devDependencies": {
