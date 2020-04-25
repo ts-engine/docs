@@ -29,6 +29,12 @@ ts-engine lint
 # Lint in auto fix mode
 ts-engine lint --fix
 
+# Start Node.js application
+ts-engine start
+
+# Start Node.js application in watch mode
+ts-engine start --watch
+
 # Run tests
 ts-engine test
 
