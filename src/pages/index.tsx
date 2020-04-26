@@ -194,24 +194,23 @@ function Feature({ icon, title, description }) {
 }
 
 function Showcase({ title, description, imgSrc, imgAlt, position }) {
-  const Img = () => <img src={imgSrc} alt={imgAlt} />;
-  const Text = () => (
-    <div>
-      <h3 className={styles.showcaseTitle}>{title}</h3>
-      <p className={styles.showcaseText}>{description}</p>
-    </div>
-  );
-
   return (
     <section className={classnames("container", styles.section)}>
-      <div className="container">
-        <div className="row">
-          <div className={"col col--6"}>
-            {position === "left" ? <Img /> : <Text />}
+      <div
+        className="row"
+        style={{
+          display: "flex",
+          flexDirection: position === "left" ? "row-reverse" : "row",
+        }}
+      >
+        <div className={"col col--6"}>
+          <div>
+            <h3 className={styles.showcaseTitle}>{title}</h3>
+            <p className={styles.showcaseText}>{description}</p>
           </div>
-          <div className={"col col--6"}>
-            {position === "left" ? <Text /> : <Img />}
-          </div>
+        </div>
+        <div className={"col col--6"}>
+          <img src={imgSrc} alt={imgAlt} />
         </div>
       </div>
     </section>
