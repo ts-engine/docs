@@ -195,7 +195,7 @@ function Feature({ icon, title, description }) {
 
 function Showcase({ title, description, imgSrc, imgAlt, position }) {
   return (
-    <section className={classnames("container", styles.section)}>
+    <Section>
       <div
         className="row"
         style={{
@@ -213,7 +213,7 @@ function Showcase({ title, description, imgSrc, imgAlt, position }) {
           <img src={imgSrc} alt={imgAlt} />
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
 
@@ -284,7 +284,7 @@ function Home() {
           </Section>
         )}
         {showcases && showcases.length && (
-          <Section>
+          <>
             {showcases.map((props, idx) => (
               <Showcase
                 key={idx}
@@ -292,7 +292,7 @@ function Home() {
                 position={idx % 2 ? "left" : "right"}
               />
             ))}
-          </Section>
+          </>
         )}
       </main>
     </Layout>
