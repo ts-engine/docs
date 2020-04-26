@@ -58,3 +58,15 @@
 .section {
   padding: 2rem;
 }
+
+.sectionHeader {
+  font-size: 28px;
+}
+
+.showcaseTitle {
+  font-size: 28px;
+}
+
+.showcaseText {
+  font-size: 16px;
+}
