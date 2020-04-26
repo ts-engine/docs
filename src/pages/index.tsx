@@ -264,15 +264,13 @@ function Home() {
       </header>
       <main>
         <Section>
-          <h3>What is ts-engine?</h3>
+          <h3 className={styles.sectionHeader}>What is ts-engine?</h3>
           <p>
-            ts-engine is a tool that provides build, lint, test and typechecking
-            functionality for TypeScript packages via an easy to use command
-            line interface. It supports building Node.js applications and
-            JavaScript libraries.{" "}
-            <strong>
-              This tool is not currently suitable for building websites.
-            </strong>
+            ts-engine is a tool that provides local development, build,
+            typechecking, test and lint functionality for TypeScript packages
+            via an easy to use command line interface. It supports building
+            Node.js applications and JavaScript libraries.{" "}
+            <strong>This tool is not designed for building websites.</strong>
           </p>
         </Section>
         {features && features.length && (
