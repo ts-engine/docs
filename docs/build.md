@@ -121,7 +121,7 @@ ts-engine build --library --minify
 </TabItem>
 </Tabs>
 
-## Sourcemaps
+## Sourcemaps
 
 Sourcemaps are produced for every build regardless whether it is a Node.js application or a library.
 
