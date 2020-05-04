@@ -92,6 +92,39 @@ ts-engine build --library --watch
 </TabItem>
 </Tabs>
 
+## Minifying output
+
+By default the build output is not minified. [Terser](https://github.com/terser/terser) is used to minify code if you provide the minify option.
+
+To minify the output run the following command:
+
+<Tabs
+defaultValue="nodejs"
+values={[
+{ label: 'Node.js App', value: 'nodejs', },
+{ label: 'Library', value: 'library', },
+]
+}>
+<TabItem value="nodejs">
+
+```sh
+ts-engine build --node-app --minify
+```
+
+</TabItem>
+<TabItem value="library">
+
+```sh
+ts-engine build --library --minify
+```
+
+</TabItem>
+</Tabs>
+
+## Sourcemaps
+
+Sourcemaps are produced for every build regardless whether it is a Node.js application or a library.
+
 ## Bundling dependencies
 
 Sometimes it is useful to bundle dependencies into the output file so you can run the file without `node_modules`. This makes it easier to use, share and deploy as it is a single file. You can bundle dependencies into a Node.js application or a library with ts-engine.
