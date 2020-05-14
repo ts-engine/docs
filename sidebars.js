@@ -7,6 +7,7 @@ module.exports = {
       "ide-support",
       "working-in-a-mono-repo",
       "react-support",
+      "packages",
     ],
   },
 };
