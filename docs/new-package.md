@@ -1,7 +1,7 @@
 ---
 id: new-package
-sidebar_label: New Package
-title: New Package
+sidebar_label: New package
+title: New package
 ---
 
 import Tabs from '@theme/Tabs';
@@ -9,7 +9,7 @@ import TabItem from '@theme/TabItem';
 
 Create new packages automatically that have ts-engine preconfigured.
 
-## Setup
+## Setup
 
 It makes sense to install `@ts-engine/cli` globally so you can use this command anywhere. However when leveraging commands like `build` and `lint` etc we strongly recommend installing it into the consuming package and not using the globally installed version.
 
