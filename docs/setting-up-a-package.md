@@ -37,6 +37,10 @@ console.log("hello world");
 Notice `--node-app` being passed to the build command in `package.json`
 :::
 
+:::note
+You can also create packages using the `new-package` command. [See how to here](./new-package).
+:::
+
 ## Setting up a library
 
 A basic library only requires a `package.json` file and a code entry file `src/main.ts`.
@@ -70,4 +74,8 @@ export const printHelloWorld = () => {
 
 :::note
 Notice `--library` being passed to the build command and `--emit` being passed to the typecheck command.
+:::
+
+:::note
+You can also create packages using the `new-package` command. [See how to here](./new-package).
 :::
