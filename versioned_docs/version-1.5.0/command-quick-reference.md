@@ -29,6 +29,15 @@ ts-engine lint
 # Lint in auto fix mode
 ts-engine lint --fix
 
+# Create new library package
+ts-engine new-package --library --name my-lib
+
+# Create new Node.js application package
+ts-engine new-package --node-app --name my-app
+
+# Set license of new package
+ts-engine new-package --license MIT --library --name my-lib
+
 # Start Node.js application
 ts-engine start
 

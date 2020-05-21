@@ -32,9 +32,8 @@ const features = [
     },
     description: (
       <>
-        ts-engine provides sensible configuration out the box, you often won't
-        even need to create configuration files for building, linting, testing
-        and typechecking.
+        ts-engine provides sensible configuration out the box without needing
+        configuration files on disk.
       </>
     ),
   },
@@ -265,11 +264,11 @@ function Home() {
         <Section>
           <h3 className={styles.sectionHeader}>What is ts-engine?</h3>
           <p>
-            ts-engine is a tool that provides local development, build,
-            typechecking, test and lint functionality for TypeScript packages
-            via an easy to use command line interface. It supports building
-            Node.js applications and JavaScript libraries.{" "}
-            <strong>This tool is not designed for building websites.</strong>
+            Write TypeScript packages with optionally zero configuration. Build,
+            lint, start, test and typecheck without any configuration. Whilst
+            ts-engine works out the box without any configuration it is open to
+            extension. You can provide custom Babel, ESLint and Jest
+            configuration.
           </p>
         </Section>
         {features && features.length && (
