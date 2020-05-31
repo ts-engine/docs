@@ -27,6 +27,35 @@ To auto fix linting issues run the following command:
 ts-engine lint --fix
 ```
 
+## React support
+
+You can lint codebases with React and JSX in them. When linting with React support React specific rules and a11y rules are applied.
+
+To support React run the following command:
+
+<Tabs
+defaultValue="nodejs"
+values={[
+{ label: 'Node.js App', value: 'nodejs', },
+{ label: 'Library', value: 'library', },
+]
+}>
+<TabItem value="nodejs">
+
+```sh
+ts-engine lint --react
+```
+
+</TabItem>
+<TabItem value="library">
+
+```sh
+ts-engine lint --react
+```
+
+</TabItem>
+</Tabs>
+
 ## Extending ESLint config
 
 ESLint config does not need to be provided to ts-engine, however it is possible to extend the config it uses.

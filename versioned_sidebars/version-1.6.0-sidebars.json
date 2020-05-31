@@ -1,16 +1,16 @@
 {
-  "version-1.2.0/docs": [
+  "version-1.6.0/docs": [
     {
       "type": "category",
       "label": "Getting Started",
       "items": [
         {
           "type": "doc",
-          "id": "version-1.2.0/installation"
+          "id": "version-1.6.0/installation"
         },
         {
           "type": "doc",
-          "id": "version-1.2.0/setting-up-a-package"
+          "id": "version-1.6.0/setting-up-a-package"
         }
       ]
     },
@@ -20,19 +20,27 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-1.2.0/build"
+          "id": "version-1.6.0/build"
         },
         {
           "type": "doc",
-          "id": "version-1.2.0/lint"
+          "id": "version-1.6.0/lint"
         },
         {
           "type": "doc",
-          "id": "version-1.2.0/test"
+          "id": "version-1.6.0/new-package"
         },
         {
           "type": "doc",
-          "id": "version-1.2.0/typecheck"
+          "id": "version-1.6.0/start"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.6.0/test"
+        },
+        {
+          "type": "doc",
+          "id": "version-1.6.0/typecheck"
         }
       ]
     },
@@ -42,19 +50,19 @@
       "items": [
         {
           "type": "doc",
-          "id": "version-1.2.0/command-quick-reference"
+          "id": "version-1.6.0/command-quick-reference"
         },
         {
           "type": "doc",
-          "id": "version-1.2.0/ide-support"
+          "id": "version-1.6.0/ide-support"
         },
         {
           "type": "doc",
-          "id": "version-1.2.0/working-in-a-mono-repo"
+          "id": "version-1.6.0/working-in-a-mono-repo"
         },
         {
           "type": "doc",
-          "id": "version-1.2.0/react-support"
+          "id": "version-1.6.0/packages"
         }
       ]
     }

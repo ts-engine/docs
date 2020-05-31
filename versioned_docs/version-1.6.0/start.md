@@ -72,6 +72,64 @@ ts-engine start --watch --args --one --two=value file.txt
 </TabItem>
 </Tabs>
 
+## Minifying output
+
+By default the build output is not minified. [Terser](https://github.com/terser/terser) is used to minify code if you provide the minify option.
+
+To minify the output run the following command:
+
+<Tabs
+defaultValue="nodejs"
+values={[
+{ label: 'Node.js App', value: 'nodejs', },
+{ label: 'Library', value: 'library', },
+]
+}>
+<TabItem value="nodejs">
+
+```sh
+ts-engine build --node-app --minify
+```
+
+</TabItem>
+<TabItem value="library">
+
+```sh
+ts-engine build --library --minify
+```
+
+</TabItem>
+</Tabs>
+
+## React support
+
+You can run codebases with React and JSX in them.
+
+To support React run the following command:
+
+<Tabs
+defaultValue="nodejs"
+values={[
+{ label: 'Node.js App', value: 'nodejs', },
+{ label: 'Library', value: 'library', },
+]
+}>
+<TabItem value="nodejs">
+
+```sh
+ts-engine start --node-app --react
+```
+
+</TabItem>
+<TabItem value="library">
+
+```sh
+ts-engine start --library --react
+```
+
+</TabItem>
+</Tabs>
+
 ## Bundling dependencies
 
 The start command supports building the Node.js application and bundling its dependencies. [See the build docs for more information](./build#bundling-dependencies).

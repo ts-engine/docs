@@ -39,6 +39,35 @@ module.exports = {
 ts-engine provides it's own `transform` property to the Jest config internally. Overwriting this may affect your compilation when running tests.
 :::
 
+## React support
+
+You can test codebases with React and JSX in them.
+
+To support React run the following command:
+
+<Tabs
+defaultValue="nodejs"
+values={[
+{ label: 'Node.js App', value: 'nodejs', },
+{ label: 'Library', value: 'library', },
+]
+}>
+<TabItem value="nodejs">
+
+```sh
+ts-engine test --react
+```
+
+</TabItem>
+<TabItem value="library">
+
+```sh
+ts-engine test --react
+```
+
+</TabItem>
+</Tabs>
+
 ## Configuring Jest via CLI
 
 All Jest CLI options are forwarded onto Jest with the exception of `--config`. This means you can easily provide options such as `--watch`.

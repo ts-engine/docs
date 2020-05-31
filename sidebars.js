@@ -6,7 +6,6 @@ module.exports = {
       "command-quick-reference",
       "ide-support",
       "working-in-a-mono-repo",
-      "react-support",
       "packages",
     ],
   },
