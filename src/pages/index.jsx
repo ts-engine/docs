@@ -20,8 +20,8 @@ const features = [
     },
     description: (
       <>
-        Install a single dependency and you're up and running so you have more
-        time to focus on writing code that matters
+        Install a single dependency for build, lint, test and typechecking
+        support so you have more time to focus on writing code that matters.
       </>
     ),
   },
@@ -32,20 +32,20 @@ const features = [
     },
     description: (
       <>
-        ts-engine provides sensible configuration out the box without needing
-        configuration files on disk.
+        Works without any configuration files. You can optionally extend or
+        provide your own Babel and ESLint and Jest config.
       </>
     ),
   },
   {
-    title: <>Fewer dependencies</>,
+    title: <>React support</>,
     icon: () => {
       return <FewerDependenciesSvg className={styles.featureImage} />;
     },
     description: (
       <>
-        ts-engine provides build, lint, test and typechecking functionality in a
-        single dependency
+        React is supported out the box providing build support aswell as
+        powerful linting including accessibility linting via a11y.
       </>
     ),
   },

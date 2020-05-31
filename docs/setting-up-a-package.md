@@ -6,7 +6,21 @@ title: Setting up a package
 
 Two types of packages are fully supported by ts-engine, Node.js applications and libraries. Because each type of package has different requirements at build time the type of the package must be provided when building.
 
-## Setting up a Node.js application
+The quickest way to get a new package up and running is to the `new-package` command. See detailed documentation for it [here](./new-package).
+
+```sh
+# Install ts-engine globally via yarn
+yarn global add @ts-engine/cli
+
+# or via npm
+npm i -g @ts-engine/cli
+
+# Create packages
+ts-engine new-package --library --name my-lib
+ts-engine new-package --node-app --name my-lib
+```
+
+## Setting up a Node.js application manually
 
 A basic Node.js application only requires a `package.json` file and a code entry file `src/main.ts`.
 
@@ -14,7 +28,6 @@ A basic Node.js application only requires a `package.json` file and a code entry
 {
   "name": "@examples/node-app",
   "version": "1.0.0",
-  "license": "MIT",
   "private": true,
   "scripts": {
     "build": "ts-engine build --node-app",
@@ -37,11 +50,7 @@ console.log("hello world");
 Notice `--node-app` being passed to the build command in `package.json`
 :::
 
-:::note
-You can also create packages using the `new-package` command. [See how to here](./new-package).
-:::
-
-## Setting up a library
+## Setting up a library manually
 
 A basic library only requires a `package.json` file and a code entry file `src/main.ts`.
 
@@ -49,7 +58,6 @@ A basic library only requires a `package.json` file and a code entry file `src/m
 {
   "name": "@examples/library",
   "version": "1.0.0",
-  "license": "MIT",
   "main": "dist/main.cjs.js",
   "module": "dist/main.esm.js",
   "types": "dist/main.d.ts",
@@ -74,8 +82,4 @@ export const printHelloWorld = () => {
 
 :::note
 Notice `--library` being passed to the build command and `--emit` being passed to the typecheck command.
-:::
-
-:::note
-You can also create packages using the `new-package` command. [See how to here](./new-package).
 :::

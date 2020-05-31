@@ -121,6 +121,35 @@ ts-engine build --library --minify
 </TabItem>
 </Tabs>
 
+## React support
+
+You can build codebases with React and JSX in them.
+
+To support React run the following command:
+
+<Tabs
+defaultValue="nodejs"
+values={[
+{ label: 'Node.js App', value: 'nodejs', },
+{ label: 'Library', value: 'library', },
+]
+}>
+<TabItem value="nodejs">
+
+```sh
+ts-engine build --node-app --react
+```
+
+</TabItem>
+<TabItem value="library">
+
+```sh
+ts-engine build --library --react
+```
+
+</TabItem>
+</Tabs>
+
 ## Sourcemaps
 
 Sourcemaps are produced for every build regardless whether it is a Node.js application or a library.

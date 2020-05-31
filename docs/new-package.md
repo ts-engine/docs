@@ -67,9 +67,11 @@ ts-engine new-package --library --name @examples/library
 The scope is not included in the folder name, so `@examples/node-app` would generate the folder `node-app`.
 :::
 
-## Setting the license
+## React support
 
-The new package's license can optionally be set when creating a package via the `--license` option.
+You can create packages with out the box support for React.
+
+To support React run the following command:
 
 <Tabs
 defaultValue="nodejs"
@@ -81,19 +83,15 @@ values={[
 <TabItem value="nodejs">
 
 ```sh
-ts-engine new-package --node-app --license MIT --name @examples/node-app
+ts-engine new-package --node-app --react --name @examples/node-app
 ```
 
 </TabItem>
 <TabItem value="library">
 
 ```sh
-ts-engine new-package --library --license MIT --name @examples/library
+ts-engine new-package --library --react --name @examples/library
 ```
 
 </TabItem>
 </Tabs>
-
-:::note
-The license will default to `UNLICENSED` if one is not provided.
-:::
