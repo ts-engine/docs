@@ -62,6 +62,9 @@ ts-engine start
 # Start Node.js application in watch mode
 ts-engine start --watch
 
+# Start Node.js application and typecheck post build
+ts-engine start --typecheck
+
 # Start Node.js application with react
 ts-engine start --react
 

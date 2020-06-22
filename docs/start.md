@@ -78,28 +78,27 @@ By default the build output is not minified. [Terser](https://github.com/terser/
 
 To minify the output run the following command:
 
-<Tabs
-defaultValue="nodejs"
-values={[
-{ label: 'Node.js App', value: 'nodejs', },
-{ label: 'Library', value: 'library', },
-]
-}>
-<TabItem value="nodejs">
-
 ```sh
-ts-engine build --node-app --minify
+ts-engine start --minify
 ```
 
-</TabItem>
-<TabItem value="library">
+## Typecheck post build
+
+By default a typecheck is not performed during a build, there is a specific [typecheck](./typecheck.md) for that. You can do this with the typecheck option.
+
+To typecheck post build run the following command:
 
 ```sh
-ts-engine build --library --minify
+ts-engine start --typecheck
 ```
 
-</TabItem>
-</Tabs>
+You can also provide --emit option on the start command if you want to produce types definition files from your node app.
+
+To typecheck and emit type definition files post build run the following command:
+
+```sh
+ts-engine start --typecheck --emit
+```
 
 ## React support
 
@@ -107,28 +106,9 @@ You can run codebases with React and JSX in them.
 
 To support React run the following command:
 
-<Tabs
-defaultValue="nodejs"
-values={[
-{ label: 'Node.js App', value: 'nodejs', },
-{ label: 'Library', value: 'library', },
-]
-}>
-<TabItem value="nodejs">
-
 ```sh
-ts-engine start --node-app --react
+ts-engine start --react
 ```
-
-</TabItem>
-<TabItem value="library">
-
-```sh
-ts-engine start --library --react
-```
-
-</TabItem>
-</Tabs>
 
 ## Bundling dependencies
 
