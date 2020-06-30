@@ -36,6 +36,9 @@ A basic Node.js application only requires a `package.json` file and a code entry
     "test": "ts-engine test",
     "typecheck": "ts-engine typecheck"
   },
+  "dependencies": {
+    "@ts-engine/runtime": "latest"
+  },
   "devDependencies": {
     "@ts-engine/cli": "latest"
   }
@@ -48,6 +51,10 @@ console.log("hello world");
 
 :::note
 Notice `--node-app` being passed to the build command in `package.json`
+:::
+
+:::note
+Notice the additional dependency `@ts-engine/runtime`.
 :::
 
 ## Setting up a library manually

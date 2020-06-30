@@ -51,4 +51,15 @@ ts-engine is made up of family of packages. Whilst for most use cases you'll onl
       </a>
     </td>
   </tr>
+  <tr>
+    <td>
+      <a href="https://github.com/ts-engine/ts-engine/tree/master/packages/runtime">@ts-engine/runtime</a>
+    </td>
+    <td>The default runtime dependency for ts-engine.</td>
+    <td>
+      <a href="https://www.npmjs.com/package/@ts-engine/runtime" rel="noopener noreferrer" target="_blank">
+        <img src="https://badgen.net/npm/v/@ts-engine/runtime" />
+      </a>
+    </td>
+  </tr>
 </table>

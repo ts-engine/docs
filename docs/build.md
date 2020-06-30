@@ -251,3 +251,7 @@ module.exports = {
   // your config goes here
 };
 ```
+
+## Runtime for Node.js applications
+
+In order to run Node.js applications built via ts-engine without dev dependencies present in a production environment you need to make sure you have `@ts-engine/runtime` installed a dependency. This is installed for you when you use the [`new-package`](./new-package) command.
