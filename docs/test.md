@@ -39,6 +39,10 @@ module.exports = {
 ts-engine provides it's own `transform` property to the Jest config internally. Overwriting this may affect your compilation when running tests.
 :::
 
+## Setup file
+
+You can provide a test setup file by creating a file called `jest.setup.ts`. This will be provided to Jest via the `setupFilesAfterEnv` config property without the need for you to configure it. This means you can have a setup file without a config file.
+
 ## React support
 
 You can test codebases with React and JSX in them.
