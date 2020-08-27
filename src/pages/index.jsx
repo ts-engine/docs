@@ -253,7 +253,7 @@ function Home() {
                 "button button--outline button--lg",
                 styles.heroLink
               )}
-              to="https://github.com/ts-engine/ts-engine/tree/master/packages/%40examples"
+              to="https://github.com/ts-engine/ts-engine/tree/master/packages/private/examples"
             >
               Examples
             </Link>
