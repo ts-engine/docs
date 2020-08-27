@@ -10,8 +10,8 @@
     "docs:version": "docusaurus docs:version"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.0.0-alpha.50",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.50",
+    "@docusaurus/core": "^2.0.0-alpha.61",
+    "@docusaurus/preset-classic": "^2.0.0-alpha.61",
     "@types/react": "^16.9.34",
     "classnames": "^2.2.6",
     "react": "^16.8.4",

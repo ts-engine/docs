@@ -19,7 +19,7 @@ module.exports = {
         alt: "ts-engine Logo",
         src: "img/logo.svg",
       },
-      links: [
+      items: [
         {
           to: "docs/installation",
           activeBasePath: "docs",
